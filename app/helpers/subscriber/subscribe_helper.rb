@@ -1,10 +1,5 @@
 module Subscriber
   module SubscribeHelper
-    
-      def subscriber_form
-        raw(render :file => 'subscriber/subscribe/_form.html.erb')
-      end
-    
       def flash_display
         response = "<div class='alert #{alert_class}'>"
         response += "<button type='button' class='close' data-dismiss='alert'>x</button>"
