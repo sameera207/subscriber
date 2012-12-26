@@ -6,10 +6,13 @@ module Subscriber
       g.integration_tool :rspec
       g.fixture_replacement :factory_girl
     end
-    initializer 'subscriber.action_controller' do |app|
-      ActiveSupport.on_load :action_controller do
-        helper Subscriber::ApplicationHelper
-      end
+    # initializer 'subscriber.action_controller' do |app|
+      # ActiveSupport.on_load :action_controller do
+        # helper Subscriber::ApplicationHelper
+      # end
+    # end
+    config.to_prepare do
+       ApplicationController.helper(SubscribeHelper)
     end
   end
 end
