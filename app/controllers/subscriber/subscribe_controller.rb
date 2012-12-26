@@ -8,7 +8,7 @@ module Subscriber
     end
     
     def create
-      @subscribe = Subscribe.new
+      @subscribe = Subscribe.new(:email => params[:email])
       @subscribe.ip = request.remote_ip
       if @subscribe.save
         flash.now[:success] = ["#{@subscribe.email} sucessfully saved"]
