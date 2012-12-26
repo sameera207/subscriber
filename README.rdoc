@@ -1,0 +1,3 @@
+= Subscriber
+
+subscriber is a very simple gem to handle your websites e-mail subscriptions
